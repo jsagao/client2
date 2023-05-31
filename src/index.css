@@ -198,12 +198,21 @@ Hero
 
 .hero {
   min-height: 100vh;
-  /* background: var(--clr-primary-5); */
+  background: var(--clr-primary-5);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), */
-  background: url(".\assets\images\main2.jpeg") center/cover no-repeat;
+  /* background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
+    url(".\assets\images\main2.jpeg") center/cover no-repeat; */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 0, 0.5),
+      rgba(0, 0, 255, 0.5)
+    ),
+    url(".\assets\images\main2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hero-banner {
   text-align: center;
@@ -233,8 +242,17 @@ Hero
 }
 @media screen {
   .hero {
-    /* background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)), */
-    background: url(".\assets\images\main2.jpeg") center/cover no-repeat;
+    /* background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
+      url(".\assets\images\main2.jpeg") center/cover no-repeat; */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 0, 0.5),
+        rgba(0, 0, 255, 0.5)
+      ),
+      url(".\assets\images\main2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .hero-banner {
     padding: 0;
