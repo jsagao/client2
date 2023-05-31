@@ -157,7 +157,7 @@ p {
   border: 2px solid transparent;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  float: right;
+  display: inline-flex;
   margin-top: 1rem;
 }
 .btn:hover {
@@ -594,9 +594,14 @@ Contactus
 #formContainer {
   width: 40%;
   margin: auto;
+  /* float: center; */
+  align-items: flex-start;
 }
 #formC {
   width: 100%;
+  float: center;
+  margin: auto;
+  align-items: flex-start;
 }
 
 .btn2contact {
@@ -627,36 +632,43 @@ Contactus
   justify-items: center;
   display: flexbox;
   font-family: monospace;
+  float: center;
 }
 
 .title1 {
   font-size: 4rem;
-  float: right;
+  float: center;
   font-weight: bold;
-  display: flexbox;
+  display: inline-flexbox;
+  margin: auto;
 }
 .rows {
   width: 60%;
   display: block;
+  float: center;
+  margin: auto;
 }
 .column {
   width: 100%;
-  display: inline-block;
+  float: center;
+  margin: auto;
 }
 .theLabels {
-  width: 30%;
+  width: 60%;
   font-family: monospace;
-  margin-left: 10rem;
+  margin: auto;
+  display: inline-flex;
 }
 .textarea {
   font-family: monospace;
   width: 60%;
   resize: none;
-  float: right;
+  display: inline-flex;
 }
 .theInputs {
   width: 60%;
-  float: right;
+  margin: auto;
+  display: inline-flex;
 }
 
 .transition1 {
