@@ -241,6 +241,12 @@ Hero
   color: var(--clr-white);
   border-color: var(--clr-white);
 }
+.hero-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-blend-mode: color-burn;
+}
 @media screen {
   .hero {
     font-family: "Courier New", Courier, monospace;
