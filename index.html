@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/assets/images/favicon.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quikstop Diesel</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css"
+      integrity="sha512-c93ifPoTvMdEJH/rKIcBx//AL1znq9+4/RmMGafI/vnTFe/dKwnn1uoeszE2zJBQTS1Ck5CqSBE+34ng2PthJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <div
+      class="center"
+      style="
+        position: fixed;
+        top: 50%;
+        right: -2px;
+        width: 115px;
+        height: 0px;
+        text-align: right;
+        z-index: 9999;
+        margin-top: -15px;
+      "
+    >
+      <a
+        href="#"
+        style="
+          transform: rotate(-90deg);
+          display: block;
+          text-align: center;
+          width: 165px;
+          padding: 8px 16px;
+          background-color: rgb(198, 0, 0);
+          color: rgb(255, 255, 255);
+          font-size: 19px;
+          font-weight: bold;
+          text-decoration: none;
+          border-bottom: 1px solid rgb(231, 231, 231);
+          border-left: 1px solid rgb(231, 231, 231);
+          border-right: 1px solid rgb(231, 231, 231);
+          border-top-color: rgb(231, 231, 231);
+          border-radius: 13px;
+        "
+        id="app-scheduling"
+        class="custom_button btn-side active"
+        alt="Booknow button"
+        data-domain-name="https://quikstop-diesel-bay-area.bookafy.com/schedule/?type=iframe&custom_embed=true&locale=en"
+        target="_blank"
+        >Book Now</a
+      >
+    </div>
+    <script
+      id="bookafy_script"
+      type="text/javascript"
+      src="https://app.bookafy.com/bookafy-popup-code.js"
+    ></script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
