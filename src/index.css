@@ -229,7 +229,7 @@ Hero
   color: var(--clr-white);
   border-color: var(--clr-white);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 5px) {
   .hero {
     background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
       url(".\assets\images\main2.jpeg") center/cover no-repeat;
@@ -630,11 +630,9 @@ Contactus
 }
 
 .title1 {
-  margin-bottom: 4rem;
   font-size: 4rem;
-  justify-self: center;
+  float: right;
   font-weight: bold;
-  padding-left: 15rem;
 }
 .rows {
   width: 60%;

@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export const Contactus = () => {
   let btnRef = useRef();
 
-  const notifyBtnClick = () => {
+  const notify = () => {
     toast("Message Sent! We will get back to you soon.");
     if (btnRef.current) {
       btnRef.current.setAttribute("disabled", "disabled");
@@ -58,7 +58,7 @@ export const Contactus = () => {
                   className="btn-contact"
                   type="submit"
                   value="Send"
-                  onClick={notifyBtnClick}
+                  onClick={notify}
                 >
                   {" "}
                   Click here to submit
