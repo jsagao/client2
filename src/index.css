@@ -229,7 +229,7 @@ Hero
   color: var(--clr-white);
   border-color: var(--clr-white);
 }
-@media screen and (min-width: 5px) {
+@media screen {
   .hero {
     background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
       url(".\assets\images\main2.jpeg") center/cover no-repeat;
