@@ -4,16 +4,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const Contactus = () => {
-  let btnRef = useRef();
+  const form = useRef();
 
   const notify = () => {
     toast("Message Sent! We will get back to you soon.");
-    if (btnRef.current) {
-      btnRef.current.setAttribute("disabled", "disabled");
+    if (form.current) {
+      form.current.setAttribute("disabled", "disabled");
     }
   };
-
-  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -54,7 +52,7 @@ export const Contactus = () => {
                 <label className="theLabels">Message</label>
                 <textarea className="textarea" name="message" />
                 <button
-                  ref={btnRef}
+                  ref={form}
                   className="btn-contact"
                   type="submit"
                   value="Send"
