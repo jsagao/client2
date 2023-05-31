@@ -630,15 +630,15 @@ Contactus
   color: var(--clr-white);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
-  display: flexbox;
+  display: inline-flexbox;
   /* font-weight: 700; */
   transition: var(--transition);
   font-size: 0.875rem;
   border: 2px solid transparent;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  float: right;
   margin-top: 1rem;
+  margin-left: auto;
 }
 .btn2contact:hover {
   color: var(--clr-primary-1);

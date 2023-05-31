@@ -5,7 +5,7 @@ const BookNowTransition = () => {
 
   return (
     <div className="theInputs">
-      <button className="btn" onClick={() => setToggle(!toggle)}>
+      <button className="btn2contact" onClick={() => setToggle(!toggle)}>
         {" "}
         Book Now to receive an estimate
       </button>
