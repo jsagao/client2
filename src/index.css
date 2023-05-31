@@ -633,6 +633,7 @@ Contactus
   font-size: 4rem;
   float: right;
   font-weight: bold;
+  display: flex;
 }
 .rows {
   width: 60%;
