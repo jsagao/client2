@@ -197,6 +197,7 @@ Hero
 */
 
 .hero {
+  font-family: "Courier New", Courier, monospace;
   min-height: 100vh;
   background: var(--clr-primary-5);
   display: flex;
@@ -242,6 +243,7 @@ Hero
 }
 @media screen {
   .hero {
+    font-family: "Courier New", Courier, monospace;
     /* background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
       url(".\assets\images\main2.jpeg") center/cover no-repeat; */
     background-image: linear-gradient(
