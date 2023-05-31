@@ -638,7 +638,7 @@ Contactus
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
-  margin-left: auto;
+  margin: auto;
 }
 .btn2contact:hover {
   color: var(--clr-primary-1);
