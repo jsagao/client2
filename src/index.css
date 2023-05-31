@@ -681,12 +681,12 @@ Contactus
 }
 .textarea {
   font-family: monospace;
-  width: 60%;
+  width: 100%;
   resize: none;
   display: inline-flex;
 }
 .theInputs {
-  width: 60%;
+  width: 100%;
   margin: auto;
   display: inline-flex;
 }
