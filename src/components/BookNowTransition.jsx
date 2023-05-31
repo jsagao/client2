@@ -21,7 +21,6 @@ const Item = () => {
         {" "}
         <h1 className="transition1"> Book Now </h1>{" "}
       </a>
-      ;
     </div>
   );
 };
