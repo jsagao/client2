@@ -1,4 +1,189 @@
 // import { useState } from "react";
+// import { dataobjects } from "../data2";
+
+// const UserChallenge = () => {
+//   const [name, setName] = useState("");
+//   const [users, setUsers] = useState(dataobjects);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log("form submitted");
+//     if(!name) return;
+//     console.log('form submitted')
+//     // if (!name || ! email)
+//   };
+
+//   return (
+//     <div>
+//       <form className="form" onSubmit={handleSubmit}>
+//         <h4>Add User</h4>
+//         <div className="form-row">
+//           <label htmlFor="name" className="form-label">
+//             name
+//           </label>
+//           <input
+//             type="text"
+//             className="form-input"
+//             id="name"
+//             value={name}
+//             onChange={(e) => setName(e.target.value)}
+//           />
+//         </div>
+
+//         <button type="submit" className="btn btn-block">
+//           submit
+//         </button>
+//       </form>
+//       {/* render users below */}
+//       <h4> users </h4>
+//       {users.map((user) => {
+//         return (
+//           <div key={user.id}>
+//             <h4> {user.name} </h4>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// };
+// export default UserChallenge;
+
+// import { useState } from "react";
+
+// const ControlledInputs = () => {
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // do something
+//     console.log(name, email);
+//   };
+//   // this becomes anonymous function on onChange
+//   //   const handleChange = (e) => {
+//   //     // console.log(e.target.name);
+//   //     // console.log(e.target.value);
+//   //     setName(e.target.value);
+//   //   };
+//   return (
+//     <form className="form" onSubmit={handleSubmit}>
+//       <h4>controlled inputs</h4>
+//       <div className="form-row">
+//         <label htmlFor="name" className="form-label">
+//           name
+//         </label>
+//         <input
+//           type="text"
+//           className="form-input"
+//           id="name"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//         />
+//       </div>
+//       <div className="form-row">
+//         <label htmlFor="email" className="form-label">
+//           Email
+//         </label>
+//         <input
+//           type="email"
+//           className="form-input"
+//           id="email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//         />
+//       </div>
+//       <button type="submit" className="btn btn-block">
+//         submit
+//       </button>
+//     </form>
+//   );
+// };
+// export default ControlledInputs;
+
+// leveraging javascript import prop
+
+// import { people } from "../data2";
+// import Person from "./Pages/Person";
+
+// const Test = () => {
+//   return (
+//     <div>
+//       {people.map((person) => {
+//         return <Person key={person.id} {...person} />;
+//       })}
+//     </div>
+//   );
+// };
+
+// export default Test;
+
+// import { useEffect, useState } from "react";
+
+// const CleanupFunction = () => {
+//   const [toggle, setToggle] = useState(false);
+//   console.log("render");
+
+//   return (
+//     <div>
+//       <button className="btn" onClick={() => setToggle(!toggle)}>
+//         toggle
+//       </button>
+//       {toggle && <RandomComponents />}
+//     </div>
+//   );
+// };
+
+// const RandomComponents = () => {
+//   console.log("render");
+//   useEffect(() => {
+//     const someFunc = () => {
+//       // some logic
+//     };
+//     window.addEventListener("scroll", someFunc);
+//     return () => {
+//       window.removeEventListener("scroll", someFunc);
+//       console.log("cleanup");
+//     };
+//   }, []);
+//   return <div>hello world</div>;
+// };
+
+// export default CleanupFunction;
+
+// cleanup function using useEffect
+// import { useEffect, useState } from "react";
+
+// const CleanupFunction = () => {
+//   const [toggle, setToggle] = useState(false);
+//   console.log("render");
+
+//   return (
+//     <div>
+//       <button className="btn" onClick={() => setToggle(!toggle)}>
+//         toggle
+//       </button>
+//       {toggle && <RandomComponents />}
+//     </div>
+//   );
+// };
+
+// const RandomComponents = () => {
+//   console.log("render");
+//   useEffect(() => {
+//     const intId = setInterval(() => {
+//       //   console.log("hello from interval");
+//     }, 1000);
+//     return () => {
+//       clearInterval(intId);
+//       console.log("cleanup");
+//     };
+//   }, []);
+//   return <div>hello world</div>;
+// };
+
+// export default CleanupFunction;
+
+// import { useState } from "react";
 
 // const UserChallenge = () => {
 //   const [user, setUser] = useState(null);

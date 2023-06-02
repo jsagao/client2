@@ -16,6 +16,7 @@ function App() {
       <About />
       <BookNowTransition />
       <Services />
+      {/* <Test /> */}
       <Contactus />
       <Tours />
       <Footer />

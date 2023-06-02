@@ -1,21 +1,23 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const Contactus = () => {
+  const [called, setCalled] = useState(false);
   const form = useRef();
+  const submitButtonRef = useRef();
 
   const notify = () => {
     toast("Message Sent! We will get back to you soon.");
-    if (form.current) {
-      form.current.setAttribute("disabled", "disabled");
-    }
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    if (!called) {
+      setCalled(true);
+      submitButtonRef.current.disabled = true;
+    }
     emailjs
       .sendForm(
         "service_7pdha3j",
@@ -52,7 +54,7 @@ export const Contactus = () => {
                 <label className="theLabels">Message</label>
                 <textarea className="textarea" name="message" />
                 <button
-                  ref={form}
+                  ref={submitButtonRef}
                   className="btn-contact"
                   type="submit"
                   value="Send"
