@@ -5,7 +5,8 @@ import Services from "./components/Services";
 import Tours from "./components/Tours";
 import Footer from "./components/Footer";
 import Contactus from "./components/Contactus";
-import Test from "./components/Test";
+// import Test from "./components/Test";
+import Carousel from "./components/Carousel/Carousel";
 import BookNowTransition from "./components/BookNowTransition";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <About />
       <BookNowTransition />
       <Services />
-      <Test />
+      {/* <Test /> */}
+      <Carousel />
       <Contactus />
       <Tours />
       <Footer />
