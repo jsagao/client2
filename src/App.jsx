@@ -5,7 +5,7 @@ import Services from "./components/Services";
 import Tours from "./components/Tours";
 import Footer from "./components/Footer";
 import Contactus from "./components/Contactus";
-// import Test from "./components/Test";
+import Test from "./components/Test";
 import BookNowTransition from "./components/BookNowTransition";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <About />
       <BookNowTransition />
       <Services />
-      {/* <Test /> */}
+      <Test />
       <Contactus />
       <Tours />
       <Footer />

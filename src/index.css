@@ -63,6 +63,7 @@ body {
 
 .tab {
   margin-left: 1rem;
+  color: #1c0239;
 }
 ul {
   list-style-type: none;
@@ -168,6 +169,7 @@ p {
 .section {
   padding: 5rem 0;
   scroll-margin-top: 4rem;
+  background-image: linear-gradient(180deg, #f9f9f9 0%, #1c0239 100%);
 }
 .section-title {
   text-align: center;
@@ -318,7 +320,8 @@ Services
 ===============
 */
 .services {
-  background: var(--clr-grey-10);
+  /* background: var(--clr-grey-10); */
+  background-image: linear-gradient(to bottom, #5417fc 0%, #138d96 100%);
 }
 .service {
   text-align: center;
@@ -336,6 +339,7 @@ Services
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
+  color: black;
 }
 
 @media screen and (min-width: 576px) {

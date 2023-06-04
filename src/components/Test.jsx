@@ -1,3 +1,201 @@
+//! FormData API
+
+import { useState } from "react";
+
+const UncontrolledInputs = () => {
+  const [value, setValue] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(e.currentTarget);
+    const formData = new FormData(e.currentTarget);
+    // console.log(formData);
+    // const email = formData.get("email");
+    // console.log(email);
+    // console.log([...formData.entries()]);
+    const newUser = Object.fromEntries(formData);
+    // new object instead of arrays
+    console.log(newUser);
+    //clear after submitting
+    setValue(value + 1);
+    e.currentTarget.reset();
+  };
+  return (
+    <div>
+      <form className="form" onSubmit={handleSubmit}>
+        <h4>Form Data API</h4>
+        {/* name */}
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
+            name
+          </label>
+          <input type="text" className="form-input" id="name" name="name" />
+        </div>
+        {/* email */}
+        <div className="form-row">
+          <label htmlFor="email" className="form-label">
+            Email
+          </label>
+          <input type="email" className="form-input" id="email" name="email" />
+        </div>
+        {/* password */}
+        <div className="form-row">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-input"
+            id="password"
+            name="password"
+          />
+        </div>
+
+        <button type="submit" className="btn btn-block">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};
+export default UncontrolledInputs;
+
+//! other inputs
+// import { useState } from "react";
+
+// const frameworks = ["react", "angular", "vue", "svelte"];
+
+// const OtherInputs = () => {
+//   const [shipping, setShipping] = useState(false);
+//   const [framework, setFramework] = useState("react");
+
+//   const handleShipping = (e) => {
+//     console.log(e.target.checked);
+//     setShipping(e.target.checked);
+//   };
+
+//   const handleFramework = (e) => {
+//     console.log(e.target.value);
+//     setShipping(e.target.value);
+//   };
+
+//   return (
+//     <div>
+//       <form className="form">
+//         <h4>Other Inputs</h4>
+//         {/* name */}
+//         <div className="form-row" style={{ textAlign: "left" }}>
+//           <label htmlFor="shipping"> Free Shipping </label>
+//           <input
+//             type="checkbox"
+//             name="shipping"
+//             id="shipping"
+//             checked={shipping}
+//             onChange={handleShipping}
+//           />
+//         </div>
+//         <div className="form-row" style={{ textAlign: "left" }}>
+//           <label htmlFor="framework" className="form-label">
+//             Framework
+//           </label>
+//           <select
+//             name="framework"
+//             id="framework"
+//             value={framework}
+//             onChange={handleFramework}
+//           >
+//             {frameworks.map((framework) => {
+//               return <option key={framework}>{framework}</option>;
+//             })}
+//           </select>
+//         </div>
+//         <button type="submit" className="btn btn-block">
+//           submit
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+// export default OtherInputs;
+
+// multiple inputs
+
+// import { useState } from "react";
+
+// const MultipleInputs = () => {
+//   const [user, setUser] = useState({
+//     name: "",
+//     email: "",
+//     password: "",
+//   });
+
+//   const handleChange = (e) => {
+//     console.log(e.target.name);
+//     console.log(e.target.value);
+//     setUser({ ...user, [e.target.name]: e.target.value });
+//   };
+
+//    const handleSubmit = (e) => {
+//     e.preventDefault()
+//    console.log(user)
+//    };
+
+//   return (
+//     <div>
+//       <form className="form" onSubmit = {handleSubmit}>
+//         <h4>Multiple Inputs</h4>
+//         {/* name */}
+//         <div className="form-row">
+//           <label htmlFor="name" className="form-label">
+//             name
+//           </label>
+//           <input
+//             type="text"
+//             className="form-input"
+//             id="name"
+//             value={user.name}
+//             onChange={handleChange}
+//             name="name"
+//           />
+//         </div>
+//         {/* email */}
+//         <div className="form-row">
+//           <label htmlFor="email" className="form-label">
+//             Email
+//           </label>
+//           <input
+//             type="email"
+//             className="form-input"
+//             id="email"
+//             value={user.email}
+//             onChange={handleChange}
+//             name="email"
+//           />
+//         </div>
+//         {/* email */}
+//         <div className="form-row">
+//           <label htmlFor="password" className="form-label">
+//             Password
+//           </label>
+//           <input
+//             type="password"
+//             className="form-input"
+//             id="password"
+//             value={user.password}
+//             onChange={handleChange}
+//             name="password"
+//           />
+//         </div>
+
+//         <button type="submit" className="btn btn-block">
+//           submit
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+// export default MultipleInputs;
+
 // import { useState } from "react";
 // import { dataobjects } from "../data2";
 
@@ -7,12 +205,23 @@
 
 //   const handleSubmit = (e) => {
 //     e.preventDefault();
-//     console.log("form submitted");
-//     if(!name) return;
-//     console.log('form submitted')
+
+//     if (!name) return;
+//     const fakeId = Date.now();
+
+//     const newUser = { id: fakeId, name };
+//     const updatedUsers = [...users, newUser];
+//     setUsers(updatedUsers);
+
+//     //Es6 short {id:fakeId, name } same as {id:fakeId, name:name}
 //     // if (!name || ! email)
+//     setName("");
 //   };
 
+//   const removeUser = (id) => {
+//     const updatedUsers = users.filter((person) => person.id !== id);
+//     setUsers(updatedUsers);
+//   };
 //   return (
 //     <div>
 //       <form className="form" onSubmit={handleSubmit}>
@@ -40,6 +249,9 @@
 //         return (
 //           <div key={user.id}>
 //             <h4> {user.name} </h4>
+//             <button onClick={() => removeUser(user.id)} className="btn">
+//               remove
+//             </button>
 //           </div>
 //         );
 //       })}

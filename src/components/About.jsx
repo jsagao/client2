@@ -4,7 +4,7 @@ function About() {
   return (
     <section className="section" id="about">
       <div className="section-title">
-        <h2>
+        <h2 className="tab">
           about <span>us</span>
         </h2>
       </div>
