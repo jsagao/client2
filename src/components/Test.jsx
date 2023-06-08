@@ -1,3 +1,142 @@
+import useFetch from "./ToggleEffects/useFetch";
+const url = "https://api.github.com/users/QuincyLarson";
+
+const FetchData = () => {
+  const { isLoading, isError, data: user } = useFetch(url);
+
+  //data:user alias  wherever data is it will also be looking for user
+  // order matters
+  // don't place user JSX before loading or error
+
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
+  if (isError) {
+    return <h2>There was an error...</h2>;
+  }
+  const { avatar_url, name, company, bio } = user;
+  return (
+    <div>
+      <img
+        style={{ width: "100px", borderRadius: "25px" }}
+        src={avatar_url}
+        alt={name}
+      />
+      <h2>{name}</h2>
+      <h4>works at {company}</h4>
+      <p>{bio}</p>
+    </div>
+  );
+};
+export default FetchData;
+
+//! useFetch
+
+// import useFetchPerson from "./ToggleEffects/useFetchPerson";
+// const url = "https://api.github.com/users/QuincyLarson";
+
+// const FetchData = () => {
+//   const { isLoading, isError, user } = useFetchPerson(url);
+
+//   // order matters
+//   // don't place user JSX before loading or error
+
+//   if (isLoading) {
+//     return <h2>Loading...</h2>;
+//   }
+//   if (isError) {
+//     return <h2>There was an error...</h2>;
+//   }
+//   const { avatar_url, name, company, bio } = user;
+//   return (
+//     <div>
+//       <img
+//         style={{ width: "100px", borderRadius: "25px" }}
+//         src={avatar_url}
+//         alt={name}
+//       />
+//       <h2>{name}</h2>
+//       <h4>works at {company}</h4>
+//       <p>{bio}</p>
+//     </div>
+//   );
+// };
+// export default FetchData;
+
+//! Custom Hooks useToggle
+
+// import useToggle from "./ToggleEffects/useToggle";
+
+// const ToggleExample = () => {
+//   const { show, toggle } = useToggle(true);
+//   return (
+//     <div>
+//       <h4>toggle custom hook</h4>
+//       <button className="btn" onClick={toggle}>
+//         toggle
+//       </button>
+//       {show && <h4>some stuff</h4>}
+//     </div>
+//   );
+// };
+// export default ToggleExample;
+
+//! useRef
+
+// import { useEffect, useRef, useState } from "react";
+
+// const UseRefBasics = () => {
+//   const [value, setValue] = useState(0);
+
+//   const refContainer = useRef(null);
+//   const isMounted = useRef(false);
+//   // console.log(refContainer);
+
+//   useEffect(() => {
+//     refContainer.current.focus();
+//   });
+
+//   useEffect(() => {
+//     if (!isMounted.current) {
+//       isMounted.current = true;
+//       return;
+//     }
+//     console.log("re-render");
+//   }, [value]);
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const name = refContainer.current.value;
+//     console.log(name);
+//   };
+
+//   return (
+//     <div>
+//       <form className="form" onSubmit={handleSubmit}>
+//         <div className="form-row">
+//           <label htmlFor="name" className="form-label">
+//             Name
+//           </label>
+//           <input
+//             type="text"
+//             id="name"
+//             className="form-input"
+//             ref={refContainer}
+//           />
+//         </div>
+//         <button type="submit" className="btn btn-block">
+//           submit
+//         </button>
+//       </form>
+//       <h1>value : {value}</h1>
+//       <button onClick={() => setValue(value + 1)} className="btn">
+//         increase
+//       </button>
+//     </div>
+//   );
+// };
+
+// export default UseRefBasics;
+
 // //! FormData API
 
 // import { useState } from "react";

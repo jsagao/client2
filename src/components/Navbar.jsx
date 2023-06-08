@@ -1,30 +1,45 @@
 import logo2 from "../assets/images/logo2.jpg";
-import { pageLinks } from "../data";
-import { socialLinks } from "../data";
+import { pageLinks, socialLinks } from "../data";
+import { useState } from "react";
+import { FaBars } from "react-icons/fa";
 
 function Navbar() {
+  const [showLinks, setShowLinks] = useState(true);
+
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
   return (
-    <nav className="navbar">
+    <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo2} className="nav-logo" alt="backroads" />
-          <button type="button" className="nav-toggle" id="nav-toggle">
-            <i className="fas fa-bars"></i>
+          <img src={logo2} className="logo" alt="backroads" />
+          <button
+            type="button"
+            className="nav-toggle"
+            id="nav-toggle"
+            onClick={toggleLinks}
+          >
+            <FaBars />
           </button>
         </div>
-        <ul className="nav-links" id="nav-links">
-          {pageLinks.map((link) => {
-            return (
-              <li key={link.id}>
-                <a href={link.href} className="nav-link">
-                  {link.text}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {showLinks && (
+          <div className="links-container">
+            <ul className="links" id="links">
+              {pageLinks.map((link) => {
+                return (
+                  <li key={link.id}>
+                    <a href={link.href} className="nav-link">
+                      {link.text}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
 
-        <ul className="nav-icons">
+        <ul className="social-icons">
           {socialLinks.map((link) => {
             const { id, href, icon } = link;
             return (
@@ -33,7 +48,7 @@ function Navbar() {
                   href={href}
                   target="blank"
                   rel="noreferrer"
-                  className="nav-icon"
+                  className="social-icon"
                 >
                   <i className={icon}></i>
                 </a>
