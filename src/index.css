@@ -723,6 +723,9 @@ Contactus
   animation-iteration-count: infinite;
 }
 @media screen and (min-width: 200px) {
+  .contactus-div {
+    width: 100%;
+  }
   .rows {
     width: 100%;
     display: block;
