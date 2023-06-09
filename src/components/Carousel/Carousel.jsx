@@ -31,6 +31,7 @@ const Carousel = () => {
 
   return (
     <section className="slider-container">
+      <h1 className="store-title">Store</h1>
       {people.map((person, personIndex) => {
         const { id, image, name, title, quote } = person;
         return (

@@ -815,6 +815,15 @@ Contactus
   overflow: hidden;
   font-family: "Courier New", Courier, monospace;
 }
+
+.store-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5417fc;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .slide {
   text-align: center;
   position: absolute;
