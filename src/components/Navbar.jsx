@@ -1,4 +1,4 @@
-import logo2 from "../assets/images/logo2.jpg";
+import logo4 from "../assets/images/logo4.jpg";
 import { pageLinks, socialLinks } from "../data";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
@@ -10,10 +10,10 @@ function Navbar() {
     setShowLinks(!showLinks);
   };
   return (
-    <nav>
+    <nav className="nav">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo2} className="logo" alt="backroads" />
+          <img src={logo4} className="logo" alt="backroads" />
           <button
             type="button"
             className="nav-toggle"
