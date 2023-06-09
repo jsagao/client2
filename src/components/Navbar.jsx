@@ -39,7 +39,7 @@ function Navbar() {
           </div>
         )}
 
-        <ul className="social-icons">
+        <ul className="social-icon">
           {socialLinks.map((link) => {
             const { id, href, icon } = link;
             return (

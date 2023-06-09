@@ -7,7 +7,7 @@ function Hero() {
           Your one stop shop for all your Diesel needs. We offer a wide range of
           quick and affordable services.
         </p>
-        <a href="#tours" className="btn hero-btn">
+        <a href="#about" className="btn hero-btn">
           Find out more
         </a>
       </div>

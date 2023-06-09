@@ -508,11 +508,16 @@ Navbar
 */
 /* add :not(.nav-logo) to img */
 
-nav {
+.nav {
   background-image: linear-gradient(#efde9b, #b4b694);
   box-shadow: var(--shadow-1);
   height: 5rem;
   margin-top: -1rem;
+  opacity: 0.9;
+}
+
+.nav:hover {
+  opacity: 1;
 }
 
 .nav-header {
@@ -537,6 +542,7 @@ nav {
   height: 4rem;
   justify-self: left;
 }
+
 .links a {
   color: var(--grey-700);
   font-size: 1rem;
@@ -551,6 +557,7 @@ nav {
   background: var(--primary-100);
   color: red;
   padding-left: 1.5rem;
+  font-size: 1.3rem;
 }
 /* 160px */
 
@@ -559,9 +566,16 @@ nav {
   transition: var(--transition);
 }
 
-.social-icons {
-  display: none;
-  size: 4rem;
+.social-icon {
+  color: var(--grey-700);
+  font-size: 1.5rem;
+  transition: var(--transition);
+  margin-right: 1rem;
+  display: flex;
+}
+
+.social-icon:hover {
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -599,11 +613,11 @@ nav {
     display: flex;
     gap: 0.5rem;
   }
-  .social-icons a {
+  .social-icon a {
     color: var(--primary-500);
     transition: var(--transition);
   }
-  .social-icons a:hover {
+  .social-icon a:hover {
     color: var(--primary-300);
   }
 }

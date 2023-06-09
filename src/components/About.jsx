@@ -28,7 +28,7 @@ function About() {
             that your diesel engine is in capable hands and will receive the
             highest level of care.
           </p>
-          <a href="#" className="btn">
+          <a href="#services" className="btn">
             read more
           </a>
         </article>
