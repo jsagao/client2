@@ -40,29 +40,31 @@ export const Contactus = () => {
       <div className="section-contact">
         <div id="formContainer">
           <form id="formC" ref={form} onSubmit={sendEmail} className="form">
-            <div className="rows">
-              <span className="title1">Contact Us</span>
-              <div className="column">
-                <label className="theLabels">Name</label>
-                <input className="theInputs" type="text" name="from_name" />
-              </div>
-              <div className="column">
-                <label className="theLabels">Email</label>
-                <input className="theInputs" type="email" name="to_name" />
-              </div>
-              <div className="column">
-                <label className="theLabels">Message</label>
-                <textarea className="textarea" name="message" />
-                <button
-                  ref={submitButtonRef}
-                  className="btn-contact"
-                  type="submit"
-                  value="Send"
-                  onClick={notify}
-                >
-                  {" "}
-                  Click here to submit
-                </button>
+            <div className=" contactus-div">
+              <div className="rows">
+                <span className="title1">Contact Us</span>
+                <div className="column">
+                  <label className="theLabels">Name</label>
+                  <input className="theInputs" type="text" name="from_name" />
+                </div>
+                <div className="column">
+                  <label className="theLabels">Email</label>
+                  <input className="theInputs" type="email" name="to_name" />
+                </div>
+                <div className="column">
+                  <label className="theLabels">Message</label>
+                  <textarea className="textarea" name="message" />
+                  <button
+                    ref={submitButtonRef}
+                    className="btn-contact"
+                    type="submit"
+                    value="Send"
+                    onClick={notify}
+                  >
+                    {" "}
+                    Click here to submit
+                  </button>
+                </div>
               </div>
             </div>
           </form>

@@ -628,6 +628,20 @@ Contactus
   align-items: flex-start;
 }
 
+.contactus-div {
+  background-image: linear-gradient(180deg, #e1eaec 0%, #c8eaed 100%);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  text-align: left;
+  margin: auto;
+  width: 80%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  resize: none;
+}
+
 .btn2contact {
   text-transform: uppercase;
   background: var(--clr-primary-5);
