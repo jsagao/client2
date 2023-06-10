@@ -628,13 +628,12 @@ Contactus
 /* add :not(.nav-logo) to img */
 
 #formContainer {
-  width: 40%;
   margin: auto;
   /* float: center; */
   align-items: flex-start;
 }
 #formC {
-  width: 100%;
+  width: 60%;
   float: center;
   margin: auto;
   align-items: flex-start;
@@ -734,7 +733,7 @@ Contactus
   animation-delay: -2s;
   animation-iteration-count: infinite;
 }
-@media screen and (min-width: 200px) {
+@media screen and (min-width: 10px) {
   .contactus-div {
     width: 100%;
   }
