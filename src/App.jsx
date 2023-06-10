@@ -6,6 +6,7 @@ import Tours from "./components/Tours";
 import Footer from "./components/Footer";
 import Contactus from "./components/Contactus";
 // import Test from "./components/Test";
+// import NavBarTest from "./components/Test/NavbarTest";
 import Carousel from "./components/Carousel/Carousel";
 import BookNowTransition from "./components/BookNowTransition";
 
@@ -18,6 +19,7 @@ function App() {
       <BookNowTransition />
       <Services />
       {/* <Test /> */}
+      {/* <NavBarTest /> */}
       <Carousel />
       <Contactus />
       <Tours />
