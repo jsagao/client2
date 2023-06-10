@@ -527,8 +527,8 @@ Navbar
 .nav-toggle {
   font-size: 1.5rem;
   color: var(--primary-500);
-  /* background: transparent;
-  border-color: transparent; */
+  background: transparent;
+  border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
 }
@@ -605,7 +605,7 @@ Navbar
   }
   .links a:hover {
     padding: 0;
-    /* background: transparent; */
+    background: transparent;
   }
   .social-icons {
     display: flex;
