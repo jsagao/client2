@@ -561,7 +561,7 @@ Navbar
 /* 160px */
 
 .links-container {
-  overflow: hidden;
+  width: fit-content;
   transition: var(--transition);
 }
 
