@@ -549,6 +549,7 @@ Navbar
   display: block;
   padding: 0.5rem 1rem;
   transition: var(--transition);
+  width: fit-content;
 }
 
 .links a:hover {

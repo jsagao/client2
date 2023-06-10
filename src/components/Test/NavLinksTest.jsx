@@ -1,7 +1,6 @@
-import PropTypes from "prop-types";
 import UserContainerTest from "./UserContainerTest";
 
-const NavLinksTest = ({ user, logout }) => {
+const NavLinksTest = () => {
   return (
     <div className="nav-container">
       <ul className="nav-links">
@@ -12,14 +11,9 @@ const NavLinksTest = ({ user, logout }) => {
           <a href="#"> about</a>
         </li>
       </ul>
-      <UserContainerTest user={user} logout={logout} />
+      <UserContainerTest />
     </div>
   );
-};
-
-NavLinksTest.propTypes = {
-  user: PropTypes.object.isRequired,
-  logout: PropTypes.func.isRequired,
 };
 
 export default NavLinksTest;
