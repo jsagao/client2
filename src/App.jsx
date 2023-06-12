@@ -9,8 +9,11 @@ import Contactus from "./components/Contactus";
 // import NavBarTest from "./components/Test/NavbarTest";
 import Carousel from "./components/Carousel/Carousel";
 import BookNowTransition from "./components/BookNowTransition";
+// import { useGlobalContext } from "./context";
 
 function App() {
+  // const { name } = useGlobalContext();
+  // console.log(name);
   return (
     <>
       <Navbar />

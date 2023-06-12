@@ -837,7 +837,7 @@ Contactus
 .slider-container {
   margin: 0 auto;
   margin-top: 1rem;
-  width: 80vw;
+  width: 20rem;
   max-width: 800px;
   position: relative;
   height: 650px;
@@ -863,9 +863,9 @@ Contactus
   transition: var(--transition);
 }
 .person-img {
-  width: 200px;
+  width: 250px;
   height: 300px;
-  border-radius: 80%;
+  border-radius: 100%;
   margin-bottom: 1rem;
   object-fit: cover;
   border: 6px solid var(--primary-200);
