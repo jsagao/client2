@@ -637,8 +637,9 @@ Contactus
   /* float: center; */
   align-items: flex-start;
 }
+
 #formC {
-  width: 80%;
+  width: fit-content;
   float: center;
   margin: auto;
   align-items: flex-start;
